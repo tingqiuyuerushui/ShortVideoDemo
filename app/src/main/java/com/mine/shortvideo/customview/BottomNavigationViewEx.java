@@ -177,6 +177,9 @@ public class BottomNavigationViewEx extends BottomNavigationView {
         // 3. get mIcon in mButtons
         for (BottomNavigationItemView button : mButtons) {
             ImageView mIcon = getField(button.getClass(), button, "mIcon");
+            if(mButtons[2] == button){
+                continue;
+            }
             // 4. set mIcon visibility gone
             mIcon.setVisibility(visibility ? View.VISIBLE : View.INVISIBLE);
         }
@@ -199,7 +202,7 @@ public class BottomNavigationViewEx extends BottomNavigationView {
                         @Override
                         public void run() {
 //                            System.out.println("mIcon.getMeasuredHeight():" + mIcon.getMeasuredHeight());
-                            setItemHeight(mItemHeight - mIcon.getMeasuredHeight());
+                            setItemHeight(mItemHeight - mIcon.getMeasuredHeight()+15);
                         }
                     });
                 }

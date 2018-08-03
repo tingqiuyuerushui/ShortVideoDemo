@@ -22,11 +22,23 @@
 
     <style name="bnve">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_height">50dp</item>
         <!--<item name="android:layout_marginBottom">10dp</item>-->
     </style>
 
     <style name="bnve_primary_bg" parent="bnve">
-        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:background">@android:color/black</item>
+    </style>
+    <style name="ProgressDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+    <!--Progress 主题-->
+    <style name="ProgressDialogStyle" parent="@style/ProgressDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
     </style>
 </resources>

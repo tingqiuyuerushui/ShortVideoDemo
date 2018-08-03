@@ -7,14 +7,17 @@ import com.umeng.commonsdk.UMConfigure;
 import com.umeng.socialize.PlatformConfig;
 
 public class MyApplication extends Application {
-    public static Context context;
+    private static MyApplication app;
+    public static Context getAppContext() {
+        return app;
+    }
 
     @Override
     public void onCreate() {
         super.onCreate();
-        context = this;
+        app = this;
         UMConfigure.setLogEnabled(true);
-        UMConfigure.init(context,"5b3dc7f3f29d9821150000a1","umeng",UMConfigure.DEVICE_TYPE_PHONE,"");
+        UMConfigure.init(app,"5b3dc7f3f29d9821150000a1","umeng",UMConfigure.DEVICE_TYPE_PHONE,"");
 //        Config.DEBUG = true;
         initPlatformConfig();
     }

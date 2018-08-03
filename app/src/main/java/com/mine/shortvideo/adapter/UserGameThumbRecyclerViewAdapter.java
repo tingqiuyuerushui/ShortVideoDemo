@@ -12,7 +12,7 @@ import com.mine.shortvideo.R;
 
 public class UserGameThumbRecyclerViewAdapter extends RecyclerView.Adapter<UserGameThumbRecyclerViewAdapter.ViewHolder>{
     private Context context;
-    private int[] imgs = {R.mipmap.timg_0,R.mipmap.timg_1,R.mipmap.timg_2,R.mipmap.timg_3,R.mipmap.timg_4,R.mipmap.timg_5};
+    private int[] imgs = {R.mipmap.timg_0,R.mipmap.timg_1,R.mipmap.timg_2,R.mipmap.add_bg};
     public UserGameThumbRecyclerViewAdapter(Context context) {
         this.context = context;
     }
@@ -31,7 +31,7 @@ public class UserGameThumbRecyclerViewAdapter extends RecyclerView.Adapter<UserG
 
     @Override
     public int getItemCount() {
-        return 6;
+        return imgs.length;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
